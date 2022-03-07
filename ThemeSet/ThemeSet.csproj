@@ -1,0 +1,1235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B57B8BB8-80E6-4F43-8BFC-08F1A0E00699}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThemeSet</RootNamespace>
+    <AssemblyName>ThemeSet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProtfolioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bingo-premium\bingo-premium\documentation.html" />
+    <Content Include="bingo-premium\bingo-premium\hire-us.html" />
+    <Content Include="bingo-premium\bingo-premium\license.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\404.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\about.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\apple-touch-icon.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\blog.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\contact.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\css\style.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\favicon.ico" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\about-us.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\about\about-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\about\about-2.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\about\about-header.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\about\member.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\avatar.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\comment-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\comment-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-4.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-5.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\post-6.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\blog\user.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\call-to-action\call-to-action-bg-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\call-to-action\call-to-action-bg.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\clients-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\clients-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\clients-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\logo-2.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\logo-3.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\logo-4.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\logo-5.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\client-logo\logo1.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\company-image-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\company-image-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\company-image.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\gallery-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\gallery-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\gallery-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\gallery-4.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\company\gallery-5.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\favicon.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\logo-white.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\logo.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-4.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-5.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-6.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-7.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\portfolio\portfolio-8.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\pricing-bg.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\slider\call-to-action-bg.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\slider\slider-bg-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\slider\slider-bg-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\team\member-1.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\team\member-2.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\images\team\member-3.jpg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\index-home.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\index-text.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\index.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\js\script.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\onepage-slider.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\onepage-text.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\animate\animate.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\filterizr\jquery.filterizr.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\form-validation\jquery.form.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\form-validation\jquery.validate.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\google-map\gmap.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\google-map\images\marker.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\jquery\jquery.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\css\lightbox.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\css\lightbox.min.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\close.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\loading.gif" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\next.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\prev.png" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox-plus-jquery.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox-plus-jquery.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\mixitup\mixitup.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\parallax\jquery.parallax-1.1.3.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\ajax-loader.gif" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\slick.svg" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\slick.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\slick.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\smooth-scroll\smooth-scroll.min.js" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\style.css" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\portfolio.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\pricing.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\sendmail.php" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\service.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\single-post.html" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\team.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._documentation.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._hire-us.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._license.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._404.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._about.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._apple-touch-icon.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._blog.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._contact.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._favicon.ico" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._index-home.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._index-text.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._index.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._onepage-slider.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._onepage-text.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._portfolio.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._pricing.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._sendmail.php" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._service.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._single-post.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._team.html" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\css\._style.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._about-us.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._favicon.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._logo-white.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._logo.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._pricing-bg.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\about\._about-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\about\._about-2.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\about\._about-header.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\about\._member.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._avatar.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._comment-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._comment-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-4.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-5.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._post-6.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\blog\._user.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\call-to-action\._call-to-action-bg-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\call-to-action\._call-to-action-bg.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._clients-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._clients-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._clients-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._logo-2.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._logo-3.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._logo-4.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._logo-5.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\client-logo\._logo1.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._company-image-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._company-image-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._company-image.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._gallery-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._gallery-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._gallery-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._gallery-4.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\company\._gallery-5.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-4.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-5.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-6.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-7.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\portfolio\._portfolio-8.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\slider\._call-to-action-bg.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\slider\._slider-bg-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\slider\._slider-bg-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\team\._member-1.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\team\._member-2.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\team\._member-3.jpg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\js\._script.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\animate\._animate.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\css\._bootstrap.min.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\js\._bootstrap.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\filterizr\._jquery.filterizr.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\form-validation\._jquery.form.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\form-validation\._jquery.validate.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\google-map\._gmap.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\google-map\images\._marker.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\jquery\._jquery.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\css\._lightbox.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\css\._lightbox.min.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\._close.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\._loading.gif" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\._next.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\images\._prev.png" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox-plus-jquery.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox-plus-jquery.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\mixitup\._mixitup.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\parallax\._jquery.parallax-1.1.3.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\._ajax-loader.gif" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\._slick.css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\._slick.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\._slick.svg" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\smooth-scroll\._smooth-scroll.min.js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\._style.css" />
+    <Content Include="classimax-premium\classimax-premium\documentation.html" />
+    <Content Include="classimax-premium\classimax-premium\hire-us.html" />
+    <Content Include="classimax-premium\classimax-premium\license.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\404.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\about-us.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\ad-list-view.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\Ad-listing.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\blog.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\category.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\contact-us.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\css\style.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\dashboard-archived-ads.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\dashboard-favourite-ads.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\dashboard-my-ads.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\dashboard-pending-ads.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\dashboard.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\404\404.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\about\about.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\account\Account.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\account\Account1.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\apps\apple-app-store.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\apps\google-play-store.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\post-1.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\post-2.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\post-3.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\post-4.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\post-5.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\blog\video-icon.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\call-to-action\cta-background.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\call-to-action\google-play-button.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\call-to-action\mockup.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\amazon.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\category-02.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\category-03.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\category-04.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\category-05.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\category-slider\category-06.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\contact-us\contact-us.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\favicon.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\footer\phone-icon.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\home\hero.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\home\hero.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\logo-footer.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\logo.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\nav-toogle-icon.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\products\products-1.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\products\products-2.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\products\products-3.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\products\products-4.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\subscription\subscription-back.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\team\team1.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\team\team2.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\team\team3.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\team\team4.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\user\user-thumb.jpg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\images\widget\store-01.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\index.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\js\script.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\login.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\package.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\bootstrap\css\bootstrap-slider.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\bootstrap-slider.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\popper.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\counter-up\jquery.counterup.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\counter-up\waypoints.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\images\fancybox_loading%402x.gif" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\images\fancybox_loading.gif" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\images\fancybox_overlay.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\images\fancybox_sprite%402x.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\images\fancybox_sprite.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\jquery.fancybox.pack.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\google-map\gmap.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\google-map\images\marker.png" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\css\nice-select.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\fastclick.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\jquery.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\jquery.nice-select.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\jquery.nice-select.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\prism.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\jQuery\jquery.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\raty\jquery.raty-fa.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\ajax-loader.gif" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\slick.svg" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick-theme.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\smoothscroll\SmoothScroll.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\smoothscroll\SmoothScroll.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-arrows-dark.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-arrows-dark.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-arrows.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-arrows.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-basic.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether-theme-basic.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\css\tether.min.css" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\js\tether.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\tether\js\tether.min.js" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\register.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\single-blog.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\single.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\store.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\terms-condition.html" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\user-profile.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._documentation.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._hire-us.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._license.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._404.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._about-us.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._ad-list-view.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._Ad-listing.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._blog.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._category.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._contact-us.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._dashboard-archived-ads.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._dashboard-favourite-ads.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._dashboard-my-ads.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._dashboard-pending-ads.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._dashboard.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._index.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._login.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._package.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._register.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._single-blog.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._single.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._store.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._terms-condition.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._user-profile.html" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\css\._style.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._favicon.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._logo-footer.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._logo.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._nav-toogle-icon.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\404\._404.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\about\._about.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\account\._Account.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\account\._Account1.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\apps\._apple-app-store.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\apps\._google-play-store.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._post-1.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._post-2.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._post-3.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._post-4.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._post-5.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\blog\._video-icon.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\call-to-action\._cta-background.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\call-to-action\._google-play-button.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\call-to-action\._mockup.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._amazon.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._category-02.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._category-03.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._category-04.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._category-05.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\category-slider\._category-06.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\contact-us\._contact-us.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\footer\._phone-icon.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\home\._hero.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\home\._hero.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\products\._products-1.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\products\._products-2.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\products\._products-3.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\products\._products-4.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\subscription\._subscription-back.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\team\._team1.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\team\._team2.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\team\._team3.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\team\._team4.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\user\._user-thumb.jpg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\widget\._store-01.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\js\._script.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\css\._bootstrap-slider.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\css\._bootstrap.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\._bootstrap-slider.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\._bootstrap.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\js\._popper.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\counter-up\._jquery.counterup.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\counter-up\._waypoints.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\._jquery.fancybox.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\._jquery.fancybox.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\._jquery.fancybox.pack.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\._jquery.fancybox.pack.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\images\._fancybox_loading%402x.gif" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\images\._fancybox_loading.gif" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\images\._fancybox_overlay.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\images\._fancybox_sprite%402x.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\images\._fancybox_sprite.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\css\._font-awesome.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\css\._font-awesome.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._fontawesome-webfont.svg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\google-map\._gmap.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\google-map\images\._marker.png" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\css\._nice-select.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\._fastclick.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\._jquery.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\._jquery.nice-select.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\._jquery.nice-select.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\js\._prism.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jQuery\._jquery.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\raty\._jquery.raty-fa.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._ajax-loader.gif" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick-theme.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\._slick.svg" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\smoothscroll\._SmoothScroll.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\smoothscroll\._SmoothScroll.min.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-arrows-dark.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-arrows-dark.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-arrows.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-arrows.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-basic.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether-theme-basic.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\css\._tether.min.css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\js\._tether.js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\js\._tether.min.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="kross\kross\documentation.html" />
+    <Content Include="kross\kross\hire-us.html" />
+    <Content Include="kross\kross\license.html" />
+    <Content Include="kross\kross\themes\kross\about.html" />
+    <Content Include="kross\kross\themes\kross\blog-single.html" />
+    <Content Include="kross\kross\themes\kross\blog.html" />
+    <Content Include="kross\kross\themes\kross\contact.html" />
+    <Content Include="kross\kross\themes\kross\css\style.css" />
+    <Content Include="kross\kross\themes\kross\images\about\author.jpg" />
+    <Content Include="kross\kross\themes\kross\images\about\signature.png" />
+    <Content Include="kross\kross\themes\kross\images\backgrounds\bg-dots.png" />
+    <Content Include="kross\kross\themes\kross\images\backgrounds\education-bg.png" />
+    <Content Include="kross\kross\themes\kross\images\backgrounds\map.png" />
+    <Content Include="kross\kross\themes\kross\images\backgrounds\team-bg.png" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-1.jpg" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-2.jpg" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-3.jpg" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-4.jpg" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-5.jpg" />
+    <Content Include="kross\kross\themes\kross\images\blog\post-6.jpg" />
+    <Content Include="kross\kross\themes\kross\images\clients-logo\client-logo-1.png" />
+    <Content Include="kross\kross\themes\kross\images\clients-logo\client-logo-2.png" />
+    <Content Include="kross\kross\themes\kross\images\clients-logo\client-logo-3.png" />
+    <Content Include="kross\kross\themes\kross\images\clients-logo\client-logo-4.png" />
+    <Content Include="kross\kross\themes\kross\images\clients-logo\client-logo-5.png" />
+    <Content Include="kross\kross\themes\kross\images\experience\icon-1.png" />
+    <Content Include="kross\kross\themes\kross\images\experience\icon-2.png" />
+    <Content Include="kross\kross\themes\kross\images\experience\icon-3.png" />
+    <Content Include="kross\kross\themes\kross\images\favicon.png" />
+    <Content Include="kross\kross\themes\kross\images\icons\design.png" />
+    <Content Include="kross\kross\themes\kross\images\icons\plan.png" />
+    <Content Include="kross\kross\themes\kross\images\icons\print.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-cyan.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-group-cyan.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-group-orange.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-group-sm.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-group-v.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\dots-orange.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-bg-top.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-bg.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-cyan-2.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-cyan-lg.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-cyan.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-orange.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-pink-round.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-pink.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\leaf-yellow.png" />
+    <Content Include="kross\kross\themes\kross\images\illustrations\page-title.png" />
+    <Content Include="kross\kross\themes\kross\images\logo.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-1.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-2.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-3.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-4.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-5.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-6.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-7.png" />
+    <Content Include="kross\kross\themes\kross\images\portfolio\item-8.png" />
+    <Content Include="kross\kross\themes\kross\images\progress-wave.png" />
+    <Content Include="kross\kross\themes\kross\images\team\member-1.png" />
+    <Content Include="kross\kross\themes\kross\images\team\member-2.png" />
+    <Content Include="kross\kross\themes\kross\images\team\member-3.png" />
+    <Content Include="kross\kross\themes\kross\images\testimonial\client-1.png" />
+    <Content Include="kross\kross\themes\kross\images\user-1.jpg" />
+    <Content Include="kross\kross\themes\kross\images\user-2.jpg" />
+    <Content Include="kross\kross\themes\kross\images\user-3.jpg" />
+    <Content Include="kross\kross\themes\kross\index.html" />
+    <Content Include="kross\kross\themes\kross\js\script.js" />
+    <Content Include="kross\kross\themes\kross\plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="kross\kross\themes\kross\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="kross\kross\themes\kross\plugins\jQuery\jquery.min.js" />
+    <Content Include="kross\kross\themes\kross\plugins\shuffle\shuffle.min.js" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\ajax-loader.gif" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\fonts\slick.svg" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\slick.css" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\slick.min.js" />
+    <Content Include="kross\kross\themes\kross\plugins\themify-icons\fonts\themify.svg" />
+    <Content Include="kross\kross\themes\kross\plugins\themify-icons\themify-icons.css" />
+    <Content Include="kross\kross\themes\kross\portfolio.html" />
+    <Content Include="kross\__MACOSX\kross\._documentation.html" />
+    <Content Include="kross\__MACOSX\kross\._hire-us.html" />
+    <Content Include="kross\__MACOSX\kross\._license.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._about.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._blog-single.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._blog.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._contact.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._index.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._portfolio.html" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\css\._style.css" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._favicon.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._logo.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._progress-wave.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._user-1.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._user-2.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._user-3.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\about\._author.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\about\._signature.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\backgrounds\._bg-dots.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\backgrounds\._education-bg.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\backgrounds\._map.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\backgrounds\._team-bg.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-1.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-2.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-3.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-4.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-5.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\blog\._post-6.jpg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\clients-logo\._client-logo-1.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\clients-logo\._client-logo-2.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\clients-logo\._client-logo-3.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\clients-logo\._client-logo-4.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\clients-logo\._client-logo-5.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\experience\._icon-1.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\experience\._icon-2.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\experience\._icon-3.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\icons\._design.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\icons\._plan.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\icons\._print.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-cyan.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-group-cyan.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-group-orange.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-group-sm.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-group-v.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._dots-orange.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-bg-top.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-bg.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-cyan-2.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-cyan-lg.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-cyan.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-orange.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-pink-round.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-pink.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._leaf-yellow.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\illustrations\._page-title.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-1.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-2.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-3.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-4.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-5.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-6.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-7.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\portfolio\._item-8.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\team\._member-1.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\team\._member-2.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\team\._member-3.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\testimonial\._client-1.png" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\js\._script.js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\bootstrap\._bootstrap.min.css" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\bootstrap\._bootstrap.min.js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\jQuery\._jquery.min.js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\shuffle\._shuffle.min.js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\._ajax-loader.gif" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\._slick.css" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\._slick.min.js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\fonts\._slick.svg" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\._themify-icons.css" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\fonts\._themify.svg" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="bingo-premium\bingo-premium\.DS_Store" />
+    <Content Include="bingo-premium\bingo-premium\changelog.md" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\css\maps\style.css.map" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox-plus-jquery.min.map" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\lightbox.min.map" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\slick.eot" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\slick.ttf" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\slick.woff" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\themefisher-font.eot" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\themefisher-font.ttf" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\themefisher-font.woff" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\style.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_404.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_about_us.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_blog.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_call-to-action.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_contact.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_counter.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_footer.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_header.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_hero-area.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_navigation.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_portfolio.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_pricing.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_services.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_single-post.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_skills.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_team.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\templates\_testimonials.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\_color.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\_common.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\_responsive.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\_typography.scss" />
+    <Content Include="bingo-premium\bingo-premium\themes\bingo-premium\template\scss\_variables.scss" />
+    <Content Include="bingo-premium\__MACOSX\._bingo-premium" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._.DS_Store" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._changelog.md" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\._themes" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\._bingo-premium" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\._template" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._images" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._plugins" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\._scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\css\._maps" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\css\maps\._style.css.map" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._about" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._blog" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._call-to-action" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._client-logo" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._company" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._portfolio" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._slider" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\images\._team" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._animate" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._bootstrap" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._filterizr" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._form-validation" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._google-map" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._jquery" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._lightbox2" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._mixitup" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._parallax" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._slick" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._smooth-scroll" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\._themefisher-font" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\._css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\bootstrap\._js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\google-map\._images" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\._dist" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\._css" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\._images" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\._js" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox-plus-jquery.min.map" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\lightbox2\dist\js\._lightbox.min.map" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\._fonts" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\._slick.eot" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\._slick.ttf" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\slick\fonts\._slick.woff" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\._fonts" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\._themefisher-font.eot" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\._themefisher-font.ttf" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\plugins\themefisher-font\fonts\._themefisher-font.woff" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\._style.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\._templates" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\.__color.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\.__common.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\.__responsive.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\.__typography.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\.__variables.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__404.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__about_us.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__blog.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__call-to-action.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__contact.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__counter.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__footer.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__header.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__hero-area.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__navigation.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__portfolio.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__pricing.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__services.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__single-post.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__skills.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__team.scss" />
+    <Content Include="bingo-premium\__MACOSX\bingo-premium\themes\bingo-premium\template\scss\templates\.__testimonials.scss" />
+    <Content Include="kross\kross\.DS_Store" />
+    <Content Include="kross\kross\changelog.md" />
+    <Content Include="kross\kross\themes\kross\css\style.css.map" />
+    <Content Include="kross\kross\themes\kross\plugins\fonts\BwNistaInt-xBd.woff" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\fonts\slick.eot" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\fonts\slick.ttf" />
+    <Content Include="kross\kross\themes\kross\plugins\slick\fonts\slick.woff" />
+    <Content Include="kross\kross\themes\kross\plugins\themify-icons\fonts\themify.eot" />
+    <Content Include="kross\kross\themes\kross\plugins\themify-icons\fonts\themify.ttf" />
+    <Content Include="kross\kross\themes\kross\plugins\themify-icons\fonts\themify.woff" />
+    <Content Include="kross\kross\themes\kross\scss\style.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_about.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_blog.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_hero-area.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_homepage.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_navigation.scss" />
+    <Content Include="kross\kross\themes\kross\scss\templates\_portfolio.scss" />
+    <Content Include="kross\kross\themes\kross\scss\_buttons.scss" />
+    <Content Include="kross\kross\themes\kross\scss\_common.scss" />
+    <Content Include="kross\kross\themes\kross\scss\_mixins.scss" />
+    <Content Include="kross\kross\themes\kross\scss\_typography.scss" />
+    <Content Include="kross\kross\themes\kross\scss\_variables.scss" />
+    <Content Include="kross\__MACOSX\._kross" />
+    <Content Include="kross\__MACOSX\kross\._.DS_Store" />
+    <Content Include="kross\__MACOSX\kross\._changelog.md" />
+    <Content Include="kross\__MACOSX\kross\._themes" />
+    <Content Include="kross\__MACOSX\kross\themes\._kross" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._css" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._images" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._js" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._plugins" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\._scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\css\._style.css.map" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._about" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._backgrounds" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._blog" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._clients-logo" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._experience" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._icons" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._illustrations" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._portfolio" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._team" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\images\._testimonial" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._bootstrap" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._fonts" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._jQuery" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._shuffle" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._slick" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\._themify-icons" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\fonts\._BwNistaInt-xBd.woff" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\._fonts" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\fonts\._slick.eot" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\fonts\._slick.ttf" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\slick\fonts\._slick.woff" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\._fonts" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\fonts\._themify.eot" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\fonts\._themify.ttf" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\plugins\themify-icons\fonts\._themify.woff" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\._style.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\._templates" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\.__buttons.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\.__common.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\.__mixins.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\.__typography.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\.__variables.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__about.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__blog.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__hero-area.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__homepage.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__navigation.scss" />
+    <Content Include="kross\__MACOSX\kross\themes\kross\scss\templates\.__portfolio.scss" />
+    <Content Include="classimax-premium\classimax-premium\.DS_Store" />
+    <Content Include="classimax-premium\classimax-premium\changelog.md" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\css\maps\style.css.map" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\animated.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\core.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\icons.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\larger.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\list.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\mixins.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\path.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\screen-reader.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\stacked.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\variables.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_animated.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_core.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_list.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_path.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\_variables.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\bower.json" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\component.json" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\CONTRIBUTING.markdown" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\ISSUE_TEMPLATE.md" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\README.markdown" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick.jquery.json" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\config.rb" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\slick.eot" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\slick.ttf" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\slick.woff" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick-theme.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick-theme.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick.less" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\slick.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\style.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_404.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_about-us.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_ad-list-view.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_ad-listing.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_blog.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_call-to-action.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_category-slider.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_category.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_contact-us.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_footer.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_header.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_hero-area.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_homepage.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_log-in.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_navigation.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_package.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_popup.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_products.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_store-single.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_store.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_submit-coupon.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_terms-condition.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_user-dashboard.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\templates\_widgets.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_backgrounds.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_common.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_lists.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_media-queries.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_tabs.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_typography.scss" />
+    <Content Include="classimax-premium\classimax-premium\themes\classimax-premium\scss\_variables.scss" />
+    <Content Include="classimax-premium\__MACOSX\._classimax-premium" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._.DS_Store" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._changelog.md" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\._themes" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\._classimax-premium" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._images" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._plugins" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\._scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\css\._maps" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\css\maps\._style.css.map" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._404" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._about" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._account" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._apps" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._blog" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._call-to-action" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._category-slider" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._contact-us" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._footer" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._home" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._products" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._subscription" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._team" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._user" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\images\._widget" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._bootstrap" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._counter-up" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._fancybox" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._font-awesome" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._google-map" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._jQuery" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._jquery-nice-select" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._raty" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._slick-carousel" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._smoothscroll" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\._tether" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\._css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\bootstrap\._js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\fancybox\._images" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\._css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\._fonts" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\._less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\._scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._fontawesome-webfont.eot" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._fontawesome-webfont.ttf" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._fontawesome-webfont.woff" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._fontawesome-webfont.woff2" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\fonts\._FontAwesome.otf" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._animated.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._bordered-pulled.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._core.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._fixed-width.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._font-awesome.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._icons.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._larger.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._list.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._mixins.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._path.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._rotated-flipped.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._screen-reader.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._stacked.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\less\._variables.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\._font-awesome.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__animated.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__bordered-pulled.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__core.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__fixed-width.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__icons.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__larger.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__list.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__mixins.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__path.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__rotated-flipped.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__screen-reader.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__stacked.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\font-awesome\scss\.__variables.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\google-map\._images" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\._css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\jquery-nice-select\._js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._bower.json" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._component.json" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._CONTRIBUTING.markdown" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._ISSUE_TEMPLATE.md" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._README.markdown" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._slick" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\._slick.jquery.json" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._config.rb" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._fonts" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick-theme.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick-theme.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick.less" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\._slick.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\._slick.eot" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\._slick.ttf" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\slick-carousel\slick\fonts\._slick.woff" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\._css" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\plugins\tether\._js" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\._style.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\._templates" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__backgrounds.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__common.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__lists.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__media-queries.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__tabs.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__typography.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\.__variables.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__404.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__about-us.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__ad-list-view.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__ad-listing.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__blog.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__call-to-action.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__category-slider.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__category.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__contact-us.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__footer.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__header.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__hero-area.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__homepage.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__log-in.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__navigation.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__package.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__popup.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__products.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__store-single.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__store.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__submit-coupon.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__terms-condition.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__user-dashboard.scss" />
+    <Content Include="classimax-premium\__MACOSX\classimax-premium\themes\classimax-premium\scss\templates\.__widgets.scss" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Protfolio\Home.cshtml" />
+    <Content Include="Views\Protfolio\Homes.cshtml" />
+    <Content Include="Views\Protfolio\About.cshtml" />
+    <Content Include="Views\Protfolio\Blog.cshtml" />
+    <Content Include="Views\Protfolio\Protfolio.cshtml" />
+    <Content Include="Views\Protfolio\Contact.cshtml" />
+    <Content Include="Views\Protfolio\Readmore.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58700</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
